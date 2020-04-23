@@ -16,6 +16,59 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script src="" async defer></script>
+        <script>
+
+            function computerPlay(){
+
+                let select = ['ROCK', 'PAPER', 'SCISSORS'];
+
+
+                return select[Math.floor((Math.random() * 3) + 0)]
+            }
+
+            function playRound(playerSelection, computerSelection) {
+                let player1 = playerSelection.toUpperCase()
+                let player2 = computerSelection
+
+                if (player1.localeCompare(player2) == 0){
+                    console.log("It was a draw!")
+                }
+                if (player1 == 'ROCK' && player2 =='SCISSORS'){
+                    console.log("You won! "+ player1+ " beats "+ player2)
+                }
+                if (player1 == 'PAPER' && player2 =='ROCK'){
+                    console.log("You won! "+ player1+ " beats "+ player2)
+                }
+                if (player1 == 'SCISSORS' && player2 =='PAPER'){
+                    console.log("You won! "+ player1+ " beats "+ player2)
+                }
+                if (player1 == 'ROCK' && player2 =='PAPER'){
+                    console.log("You lost! "+ player2+ " beats "+ player2)
+                }
+                if (player1 == 'PAPER' && player2 =='SCISSORS'){
+                    console.log("You lost! "+ player2+ " beats "+ player2)
+                }
+                if (player1 == 'SCISSORS' && player2 =='ROCK'){
+                    console.log("You lost! "+ player2+ " beats "+ player2)
+                }
+            }
+
+            function game() {
+
+                for (let index = 0; index < 5; index++) {
+
+                    const playerSelection = prompt("Rock, Paper or Scissors?")
+                    const computerSelection = computerPlay()
+                    playRound(playerSelection, computerSelection)                  
+                }
+
+
+                
+            }
+
+            game()
+
+
+        </script>
     </body>
 </html>
