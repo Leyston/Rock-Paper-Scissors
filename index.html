@@ -9,20 +9,28 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div id="grid" class="container">
+
+            <div id="buttons" class="item_a">
+                <button id="ROCK">ROCK</button>
+                <button id="PAPER">PAPER</button>
+                <button id="SCISSORS">SCISSORS</button>
+            </div>
+    
+            <!--ContainSer de los resultados-->
+            <div id="resultados" class="item_b">
+    
+            </div>
+
+
+        </div>
         <!--Container de los botones-->
-        <div id="container">
-            <button id="ROCK">ROCK</button>
-            <button id="PAPER">PAPER</button>
-            <button id="SCISSORS">SCISSORS</button>
-        </div>
 
-        <!--Container de los resultados-->
-        <div id="container_res">
 
-        </div>
+
         <script>
             //Selecciona la juada de la computadora 
             function computerPlay(){
@@ -35,7 +43,7 @@
 
             // Crea busca el container de los reultados y crea el elementeo en dondes se presetna los
             //resultados 
-            const container_res = document.querySelector('#container_res');
+            const container_res = document.querySelector('#resultados');
             const content = document.createElement('p');
             const counter = document.createElement('p');
             content.classList.add('content');
