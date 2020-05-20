@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+
+            //Elige la seleccion de la computadora 
+            function computerPlay(){
+
+                let select = ['ROCK', 'PAPER', 'SCISSORS'];
+
+
+                return select[Math.floor((Math.random() * 3) + 0)]
+            }
+
+            // Juega una ronda de rock, paper, scissors 
+            function playRound(playerSelection, computerSelection) {
+                let player1 = playerSelection.toUpperCase()
+                let player2 = computerSelection
+
+                if (player1.localeCompare(player2) == 0){
+                    console.log("It was a draw!")
+                }
+                if (player1 == 'ROCK' && player2 =='SCISSORS'){
+                    console.log("You won! "+ player1+ " beats "+ player2)
+                }
+                if (player1 == 'PAPER' && player2 =='ROCK'){
+                    console.log("You won! "+ player1+ " beats "+ player2)
+                }
+                if (player1 == 'SCISSORS' && player2 =='PAPER'){
+                    console.log("You won! "+ player1+ " beats "+ player2)
+                }
+                if (player1 == 'ROCK' && player2 =='PAPER'){
+                    console.log("You lost! "+ player2+ " beats "+ player2)
+                }
+                if (player1 == 'PAPER' && player2 =='SCISSORS'){
+                    console.log("You lost! "+ player2+ " beats "+ player2)
+                }
+                if (player1 == 'SCISSORS' && player2 =='ROCK'){
+                    console.log("You lost! "+ player2+ " beats "+ player2)
+                }
+            }
+
+            //Juega 5 rondas, pregunta al jugador que seleccionar 
+            function game() {
+
+                for (let index = 0; index < 5; index++) {
+
+                    const playerSelection = prompt("Rock, Paper or Scissors?")
+                    const computerSelection = computerPlay()
+                    playRound(playerSelection, computerSelection)                  
+                }
+
+
+                
+            }
+
+            game()
+
+
+        </script>
+    </body>
+</html>
