@@ -14,14 +14,16 @@
     <body>
         <div id="grid" class="container">
 
-            <div id="buttons" class="item_a">
+            <div id="Title" class="item_a"><h2>Rock, Paper, Scissors.</h2></div> <!--cambiar esta texto por una imagen-->
+
+            <div id="buttons" class="item_b">
                 <button id="ROCK">ROCK</button>
                 <button id="PAPER">PAPER</button>
                 <button id="SCISSORS">SCISSORS</button>
             </div>
     
             <!--ContainSer de los resultados-->
-            <div id="resultados" class="item_b">
+            <div id="resultados" class="item_c">
     
             </div>
 
@@ -48,6 +50,7 @@
             const counter = document.createElement('p');
             content.classList.add('content');
             counter.classList.add('counter');
+
 
             let count_p1 = 0;
             let count_p2 = 0;
@@ -87,21 +90,21 @@
                     container_res.appendChild(counter);
                 }
                 if (player1 == 'ROCK' && player2 =='PAPER'){
-                    content.textContent = "You lost! "+ player2+ " beats "+ player2;
+                    content.textContent = "You lost! "+ player2+ " beats "+ player1;
                     container_res.appendChild(content);
                     count_p2 = count_p2 +1;
                     counter.textContent = "Player1: "+count_p1 +" Player2: "+ count_p2;
                     container_res.appendChild(counter);
                 }
                 if (player1 == 'PAPER' && player2 =='SCISSORS'){
-                    content.textContent = "You lost! "+ player2+ " beats "+ player2;
+                    content.textContent = "You lost! "+ player2+ " beats "+ player1;
                     container_res.appendChild(content);
                     count_p2 = count_p2 +1;
                     counter.textContent = "Player1: "+count_p1 +" Player2: "+ count_p2;
                     container_res.appendChild(counter);
                 }
                 if (player1 == 'SCISSORS' && player2 =='ROCK'){
-                    content.textContent = "You lost! "+ player2+ " beats "+ player2;
+                    content.textContent = "You lost! "+ player2+ " beats "+ player1;
                     container_res.appendChild(content);
                     count_p2 = count_p2 +1;
                     counter.textContent = "Player1: "+count_p1 +" Player2: "+ count_p2;

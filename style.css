@@ -16,7 +16,7 @@ button {
 .container {
     display: grid ;
     grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
-    grid-template-rows: [row1-start] 100px [row1-end] 100px [third-line] auto [last-line];
+    grid-template-rows: [row1-start] 100px [row1-end] 100px [third-line] auto [last-line] 100px;
 }
 
 .item_a {
@@ -26,9 +26,21 @@ button {
     grid-row-end: 2;
     margin: auto;
 }
+
 .item_b {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: row1-end;
     grid-row-end: 3;
+    margin: auto;
+}
+.item_c {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: auto;
+    background: darkgray;
+    padding-left: 50px;
+    padding-right: 50px;
 }
