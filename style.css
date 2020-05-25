@@ -9,14 +9,15 @@ p {
 
 button {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    font-size: 20px;
 }
 
 
 .container {
     display: grid ;
     grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
-    grid-template-rows: [row1-start] 100px [row1-end] 100px [third-line] auto [last-line] 100px;
+    grid-template-rows: [row1-start] 100px [row1-end] 300px [third-line] auto [last-line] 100px;
 }
 
 .item_a {
@@ -25,6 +26,8 @@ button {
     grid-row-start: row1-start;
     grid-row-end: 2;
     margin: auto;
+    font-size: 30px;
+    font-style: italic;
 }
 
 .item_b {
@@ -41,6 +44,6 @@ button {
     grid-row-end: 4;
     margin: auto;
     background: darkgray;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
